@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Me - Values Assessment × AI Advisor</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/app_icon/Icon-maskable-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/app_icon/Icon-maskable-512.png">
+    <meta name="description" content="Discover your true self through 48 questions. Your personal AI advisor helps you take positive steps forward.">
+    <meta name="keywords" content="values assessment, personality test, AI advisor, self-discovery, personal development, life coach, character types, psychology">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="It's Me - Values Assessment × AI Advisor">
+    <meta property="og:description" content="Discover your true self through 48 questions. Your personal AI advisor helps you take positive steps forward.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itsme-app.com">
+    <meta property="og:image" content="https://itsme-app.com/assets/images/app_icon/Icon-512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="It's Me">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://itsme-app.com/">
+    
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="en" href="https://itsme-app.com/">
+    <link rel="alternate" hreflang="es" href="https://itsme-app.com/es/">
+    <link rel="alternate" hreflang="ja" href="https://itsme-app.com/ja/">
+    <link rel="alternate" hreflang="ko" href="https://itsme-app.com/ko/">
+    <link rel="alternate" hreflang="x-default" href="https://itsme-app.com/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="It's Me - Values Assessment × AI Advisor">
+    <meta name="twitter:description" content="Discover your true self through 48 questions. Your personal AI advisor helps you take positive steps forward.">
+    <meta name="twitter:image" content="https://itsme-app.com/assets/images/app_icon/Icon-512.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "It's Me - Values Assessment",
+      "description": "Discover your true self through 48 questions. Your personal AI advisor helps you take positive steps forward.",
+      "url": "https://itsme-app.com",
+      "applicationCategory": "Lifestyle",
+      "operatingSystem": "iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#top" class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/app_icon/Icon-maskable-192.png" alt="It's Me Logo">
+                    </div>
+                    <span class="logo-text">It's Me</span>
+                </a>
+                <div class="header-actions">
+                    <div class="language-switcher">
+                        <label for="lang-select-desktop" class="sr-only">Select Language</label>
+                        <select id="lang-select-desktop" class="lang-select lang-select-desktop" aria-label="Language selection">
+                            <option value="en" selected>🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="ko">🇰🇷 한국어</option>
+                        </select>
+                        <label for="lang-select-mobile" class="sr-only">Select Language</label>
+                        <select id="lang-select-mobile" class="lang-select lang-select-mobile" aria-label="Language selection">
+                            <option value="en" selected>🇺🇸</option>
+                            <option value="es">🇪🇸</option>
+                            <option value="ja">🇯🇵</option>
+                            <option value="ko">🇰🇷</option>
+                        </select>
+                    </div>
+                    <a href="/app/" class="btn btn-primary" role="button" aria-label="Start values assessment">Start Assessment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <div id="top"></div>
+    <section class="hero" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover Your Values and<br>Take a Positive Step Forward</h1>
+                <p class="hero-subtitle">
+                    Discover your true self through 48 questions.<br>
+                    Your AI advisor will help you find personalized answers.
+                </p>
+
+                <div class="mockup-container">
+                    <div class="phone-mockup">
+                        <div class="mockup-screen">
+                            <div class="screenshot-slideshow" aria-label="App screenshot slideshow">
+                                <div class="screenshot-slide active">
+                                    <img src="assets/images/screenshot/bear.webp" alt="Bear type assessment result screen" loading="eager">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/bee.webp" alt="Bee type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/cat.webp" alt="Cat type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/dog.webp" alt="Dog type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/elephant.webp" alt="Elephant type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/hyou.webp" alt="Leopard type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/lion.webp" alt="Lion type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/owl.webp" alt="Owl type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/ox.webp" alt="Ox type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/peacock.webp" alt="Peacock type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/rabbit.webp" alt="Rabbit type assessment result screen" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="assets/images/screenshot/turtle.webp" alt="Turtle type assessment result screen" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="/app/" class="btn btn-primary">Start Free Assessment</a>
+                </div>
+
+                <div class="store-buttons">
+                    <a href="#" class="store-btn" role="button" aria-label="Download on App Store (Coming Soon)">
+                        <img src="assets/images/badges/app-store-badge.svg" alt="Download on the App Store" loading="lazy">
+                        <span class="coming-soon-badge" aria-label="Coming Soon">Coming Soon</span>
+                    </a>
+                    <a href="#" class="store-btn" role="button" aria-label="Download on Google Play (Coming Soon)">
+                        <img src="assets/images/badges/google-play-badge.svg" alt="Get it on Google Play" loading="lazy">
+                        <span class="coming-soon-badge" aria-label="Coming Soon">Coming Soon</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps">
+        <div class="container">
+            <h2>Understand Your Values in 3 Steps</h2>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M9 12H9.01M9 16H9.01M12 16H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Answer 48 Questions</h3>
+                    <p class="step-description">Tell us what matters to you through a 5-point rating scale</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Discover Your Type</h3>
+                    <p class="step-description">Find your perfect character from 12 different value types</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="7" width="12" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="10" cy="11" r="1" fill="currentColor"/>
+                            <circle cx="14" cy="11" r="1" fill="currentColor"/>
+                            <path d="M10 14C10 14 11 15 12 15C13 15 14 14 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M6 19L8 21M18 19L16 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Consult with AI Advisor</h3>
+                    <p class="step-description">Receive personalized advice based on your unique values</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Types Section -->
+    <section class="character-types">
+        <div class="container">
+            <h2>What Type Are You?</h2>
+            <div class="characters-grid">
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/dog.webp" alt="Dog character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Dog</h3>
+                    <p class="character-category">Relationships & Community</p>
+                    <p class="character-description">Warm-hearted people who value human connections</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/tortoise.webp" alt="Turtle character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Turtle</h3>
+                    <p class="character-category">Health & Stability</p>
+                    <p class="character-description">Steady people who seek stable and secure living</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/peacock.webp" alt="Peacock character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Peacock</h3>
+                    <p class="character-category">Beauty & Creativity</p>
+                    <p class="character-description">Artistic people who pursue beauty and creativity</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/hyou.webp" alt="Leopard character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Leopard</h3>
+                    <p class="character-category">Challenge & Adventure</p>
+                    <p class="character-description">Adventurous people who enjoy new challenges</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/owl.webp" alt="Owl character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Owl</h3>
+                    <p class="character-category">Logic & Reality</p>
+                    <p class="character-description">People who make calm judgments through logical thinking</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/cat.webp" alt="Cat character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Cat</h3>
+                    <p class="character-category">Love & Emotion</p>
+                    <p class="character-description">Gentle souls who are emotionally rich and deeply loving</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/cow.webp" alt="Ox character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Ox</h3>
+                    <p class="character-category">Authority & Prestige</p>
+                    <p class="character-description">Leader-type people who aim for high status and success</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/honeybees.webp" alt="Bee character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Bee</h3>
+                    <p class="character-category">Contribution & Social Participation</p>
+                    <p class="character-description">People with a strong sense of mission to serve society</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/rabbit.webp" alt="Rabbit character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Rabbit</h3>
+                    <p class="character-category">Fun & Pleasure</p>
+                    <p class="character-description">Free-spirited people who value enjoying life</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/elephant.webp" alt="Elephant character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Elephant</h3>
+                    <p class="character-category">Morality & Ethics</p>
+                    <p class="character-description">People with strong sense of justice who value moral judgment</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/lion.webp" alt="Lion character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Lion</h3>
+                    <p class="character-category">Self-Growth & Self-Understanding</p>
+                    <p class="character-description">Growth-oriented people who constantly strive to improve themselves</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="assets/images/characters/bear.webp" alt="Bear character icon" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">Bear</h3>
+                    <p class="character-category">Faith & Spirit</p>
+                    <p class="character-description">People who seek spiritual richness and inner peace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>User Testimonials</h2>
+            <div class="testimonial-carousel" role="region" aria-label="ユーザーの声カルーセル">
+                <div class="testimonial-track" aria-live="polite">
+                    <div class="testimonial-slide" role="tabpanel" aria-label="ユーザーの声 1">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"My values became clear and I was able to make a career change decision"</p>
+                            <p class="testimonial-profile">28 years old, Office worker</p>
+                            <p class="testimonial-type">Challenge & Adventure Type</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide" role="tabpanel" aria-label="ユーザーの声 2">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"The values assessment results were detailed and I understood my characteristics well"</p>
+                            <p class="testimonial-profile">34 years old, Homemaker</p>
+                            <p class="testimonial-type">Relationships & Community Type</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide" role="tabpanel" aria-label="ユーザーの声 3">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"When I shared my results, conversations with friends became more lively!"</p>
+                            <p class="testimonial-profile">25 years old, Student</p>
+                            <p class="testimonial-type">Beauty & Creativity Type</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators" role="tablist" aria-label="ユーザーの声ナビゲーション">
+                <button class="carousel-dot active" role="tab" aria-selected="true" aria-controls="testimonial-1" aria-label="ユーザーの声 1を表示" data-slide="0"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-controls="testimonial-2" aria-label="ユーザーの声 2を表示" data-slide="1"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-controls="testimonial-3" aria-label="ユーザーの声 3を表示" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#top" class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/app_icon/Icon-maskable-192.png" alt="It's Me Logo">
+                    </div>
+                    <span class="logo-text">It's Me</span>
+                </a>
+                <nav class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </nav>
+                <!-- Social Links - Commented out until accounts are created
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                -->
+                <p class="copyright">© 2025 It's Me. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
