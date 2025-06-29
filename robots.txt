@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://itsme-app.com/sitemap.xml
+
+# Disallow specific files
+Disallow: /manifest.json
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow important resources for SEO
+Allow: /assets/images/
+Allow: /assets/images/app_icon/
+Allow: /assets/images/badges/
+Allow: /assets/images/characters/
+Allow: /assets/images/screenshot/

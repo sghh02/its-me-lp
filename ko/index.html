@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Me - 가치관 진단 × AI 어드바이저</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/app_icon/Icon-maskable-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../assets/images/app_icon/Icon-maskable-192.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="description" content="48개의 질문으로 진짜 나를 발견하세요. 당신만의 AI 어드바이저가 긍정적인 한 걸음을 내딛는 데 도움을 드립니다.">
+    <meta name="keywords" content="가치관 진단, 성격 테스트, AI 어드바이저, 자기 발견, 개인 발전, 라이프 코치, 캐릭터 유형, 심리학">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    
+    <link rel="manifest" href="../manifest.json">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="It's Me - 가치관 진단 × AI 어드바이저">
+    <meta property="og:description" content="48개의 질문으로 진짜 나를 발견하세요. 당신만의 AI 어드바이저가 긍정적인 한 걸음을 내딛는 데 도움을 드립니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itsme-app.com/ko/">
+    <meta property="og:image" content="https://itsme-app.com/assets/images/app_icon/Icon-512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="It's Me">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://itsme-app.com/ko/">
+    
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="en" href="https://itsme-app.com/">
+    <link rel="alternate" hreflang="es" href="https://itsme-app.com/es/">
+    <link rel="alternate" hreflang="ja" href="https://itsme-app.com/ja/">
+    <link rel="alternate" hreflang="ko" href="https://itsme-app.com/ko/">
+    <link rel="alternate" hreflang="x-default" href="https://itsme-app.com/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="It's Me - 가치관 진단 × AI 어드바이저">
+    <meta name="twitter:description" content="48개의 질문으로 진짜 나를 발견하세요. 당신만의 AI 어드바이저가 긍정적인 한 걸음을 내딛는 데 도움을 드립니다.">
+    <meta name="twitter:image" content="https://itsme-app.com/assets/images/app_icon/Icon-512.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "It's Me - 가치관 진단",
+      "description": "48개의 질문으로 진짜 나를 발견하세요. 당신만의 AI 어드바이저가 긍정적인 한 걸음을 내딛는 데 도움을 드립니다.",
+      "url": "https://itsme-app.com/ko/",
+      "applicationCategory": "Lifestyle",
+      "operatingSystem": "iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#top" class="logo">
+                    <div class="logo-icon">
+                        <img src="../assets/images/app_icon/Icon-maskable-192.png" alt="It's Me Logo">
+                    </div>
+                    <span class="logo-text">It's Me</span>
+                </a>
+                <div class="header-actions">
+                    <div class="language-switcher">
+                        <label for="lang-select-desktop" class="sr-only">언어 선택</label>
+                        <select id="lang-select-desktop" class="lang-select lang-select-desktop" aria-label="언어 선택">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="es">🇪🇸 Español</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="ko" selected>🇰🇷 한국어</option>
+                        </select>
+                        <label for="lang-select-mobile" class="sr-only">언어 선택</label>
+                        <select id="lang-select-mobile" class="lang-select lang-select-mobile" aria-label="언어 선택">
+                            <option value="en">🇺🇸</option>
+                            <option value="es">🇪🇸</option>
+                            <option value="ja">🇯🇵</option>
+                            <option value="ko" selected>🇰🇷</option>
+                        </select>
+                    </div>
+                    <a href="/app/" class="btn btn-primary" role="button" aria-label="가치관 진단 시작">진단 시작</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <div id="top"></div>
+    <section class="hero" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>당신의 가치관을 발견하고<br>긍정적인 한 걸음을 내딜어요</h1>
+                <p class="hero-subtitle">
+                    48개의 질문으로 진짜 나를 발견하세요.<br>
+                    AI 어드바이저가 당신만의 답을 찾아드립니다.
+                </p>
+
+                <div class="mockup-container">
+                    <div class="phone-mockup">
+                        <div class="mockup-screen">
+                            <div class="screenshot-slideshow" aria-label="앱 스크린샷 슬라이드쇼">
+                                <div class="screenshot-slide active">
+                                    <img src="../assets/images/screenshot/bear.webp" alt="곰 유형 진단 결과 화면" loading="eager">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/bee.webp" alt="벌 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/cat.webp" alt="고양이 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/dog.webp" alt="개 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/elephant.webp" alt="코끼리 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/hyou.webp" alt="표범 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/lion.webp" alt="사자 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/owl.webp" alt="올빼미 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/ox.webp" alt="소 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/peacock.webp" alt="공작 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/rabbit.webp" alt="토끼 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                                <div class="screenshot-slide">
+                                    <img src="../assets/images/screenshot/turtle.webp" alt="거북이 유형 진단 결과 화면" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="/app/" class="btn btn-primary">무료 진단 시작</a>
+                </div>
+
+                <div class="store-buttons">
+                    <a href="#" class="store-btn" role="button" aria-label="App Store에서 다운로드 (출시 예정)">
+                        <img src="../assets/images/badges/app-store-badge.svg" alt="Download on the App Store" loading="lazy">
+                        <span class="coming-soon-badge" aria-label="출시 예정">출시 예정</span>
+                    </a>
+                    <a href="#" class="store-btn" role="button" aria-label="Google Play에서 다운로드 (출시 예정)">
+                        <img src="../assets/images/badges/google-play-badge.svg" alt="Get it on Google Play" loading="lazy">
+                        <span class="coming-soon-badge" aria-label="출시 예정">출시 예정</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps">
+        <div class="container">
+            <h2>3단계로 당신의 가치관 이해하기</h2>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M9 12H9.01M9 16H9.01M12 16H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">48개 질문에 답하기</h3>
+                    <p class="step-description">5점 스케일로 당신에게 중요한 것을 알려주세요</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">당신의 타입 발견</h3>
+                    <p class="step-description">12가지 가치관 타입 중에서 당신에게 딱 맞는 캐릭터를 찾아보세요</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="7" width="12" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="10" cy="11" r="1" fill="currentColor"/>
+                            <circle cx="14" cy="11" r="1" fill="currentColor"/>
+                            <path d="M10 14C10 14 11 15 12 15C13 15 14 14 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M6 19L8 21M18 19L16 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">AI 어드바이저와 상담</h3>
+                    <p class="step-description">당신의 고유한 가치관에 기반한 개인 맞춤 조언을 받아보세요</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Types Section -->
+    <section class="character-types">
+        <div class="container">
+            <h2>당신은 어떤 타입인가요?</h2>
+            <div class="characters-grid">
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/dog.webp" alt="개 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">개</h3>
+                    <p class="character-category">관계 & 공동체</p>
+                    <p class="character-description">인간 관계를 소중히 여기는 따뜻한 마음의 소유자</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/tortoise.webp" alt="거북이 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">거북이</h3>
+                    <p class="character-category">건강 & 안정</p>
+                    <p class="character-description">안정적이고 안전한 삶을 추구하는 공고한 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/peacock.webp" alt="공작 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">공작</h3>
+                    <p class="character-category">아름다움 & 창의성</p>
+                    <p class="character-description">아름다움과 창의성을 추구하는 예술적인 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/hyou.webp" alt="표범 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">표범</h3>
+                    <p class="character-category">도전 & 모험</p>
+                    <p class="character-description">새로운 도전을 즐기는 모험심 넘치는 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/owl.webp" alt="올빼미 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">올빼미</h3>
+                    <p class="character-category">논리 & 현실</p>
+                    <p class="character-description">논리적 사고를 통해 침착한 판단을 내리는 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/cat.webp" alt="고양이 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">고양이</h3>
+                    <p class="character-category">사랑 & 감정</p>
+                    <p class="character-description">감정이 풍부하고 깊이 사랑하는 따뜻한 마음의 소유자</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/cow.webp" alt="소 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">소</h3>
+                    <p class="character-category">권위 & 명성</p>
+                    <p class="character-description">높은 지위와 성공을 목표로 하는 리더 기질의 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/honeybees.webp" alt="벌 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">벌</h3>
+                    <p class="character-category">기여 & 사회 참여</p>
+                    <p class="character-description">사회를 위해 봉사하는 강한 사명감을 가진 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/rabbit.webp" alt="토끼 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">토끼</h3>
+                    <p class="character-category">재미 & 즐거움</p>
+                    <p class="character-description">인생을 즐기는 것을 소중히 여기는 자유로운 영혼</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/elephant.webp" alt="코끼리 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">코끼리</h3>
+                    <p class="character-category">도덕 & 윤리</p>
+                    <p class="character-description">강한 정의감을 가지고 도덕적 판단을 중시하는 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/lion.webp" alt="사자 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">사자</h3>
+                    <p class="character-category">자기성장 & 자기이해</p>
+                    <p class="character-description">끊임없이 자신을 향상시키려고 노력하는 성장 지향적인 사람</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-emoji-container">
+                        <img src="../assets/images/characters/bear.webp" alt="곰 캐릭터 아이콘" class="character-emoji" loading="lazy">
+                    </div>
+                    <h3 class="character-name">곰</h3>
+                    <p class="character-category">신앙 & 영성</p>
+                    <p class="character-description">영적 풍요로움과 내면의 평화를 추구하는 사람</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>사용자 후기</h2>
+            <div class="testimonial-carousel" role="region" aria-label="사용자 후기 캐러셀">
+                <div class="testimonial-track" aria-live="polite">
+                    <div class="testimonial-slide" role="tabpanel" aria-label="사용자 후기 1">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"내 가치관이 명확해져서 직업 전환 결정을 할 수 있었어요"</p>
+                            <p class="testimonial-profile">28세, 회사원</p>
+                            <p class="testimonial-type">도전 & 모험 타입</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide" role="tabpanel" aria-label="사용자 후기 2">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"가치관 진단 결과가 상세해서 제 특성을 잘 이해할 수 있었어요"</p>
+                            <p class="testimonial-profile">34세, 주부</p>
+                            <p class="testimonial-type">관계 & 공동체 타입</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide" role="tabpanel" aria-label="사용자 후기 3">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"결과를 공유했더니 친구들과 대화가 더욱 활발해졌어요!"</p>
+                            <p class="testimonial-profile">25세, 학생</p>
+                            <p class="testimonial-type">아름다움 & 창의성 타입</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators" role="tablist" aria-label="사용자 후기 네비게이션">
+                <button class="carousel-dot active" role="tab" aria-selected="true" aria-controls="testimonial-1" aria-label="사용자 후기 1 보기" data-slide="0"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-controls="testimonial-2" aria-label="사용자 후기 2 보기" data-slide="1"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-controls="testimonial-3" aria-label="사용자 후기 3 보기" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#top" class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/images/app_icon/Icon-maskable-192.png" alt="It's Me Logo">
+                    </div>
+                    <span class="logo-text">It's Me</span>
+                </a>
+                <nav class="footer-links">
+                    <a href="../privacy-policy.html">개인정보처리방침</a>
+                    <a href="../terms-of-service.html">이용약관</a>
+                </nav>
+                <!-- Social Links - Commented out until accounts are created
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                -->
+                <p class="copyright">© 2025 It's Me. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
