@@ -128,6 +128,9 @@ function initLanguageSwitcher() {
     }
 
     function navigateToLanguage(langCode) {
+        // Save user language preference
+        localStorage.setItem('preferredLanguage', langCode);
+        
         const currentPath = window.location.pathname;
         const fileName = currentPath.split('/').pop() || 'index.html';
         const isSubpage = currentPath.includes('/ja/') || currentPath.includes('/ko/') || currentPath.includes('/es/');
@@ -184,6 +187,204 @@ function initLanguageSwitcher() {
 
 // Initialize language switcher
 initLanguageSwitcher();
+
+// Language detection and suggestion banner
+function initLanguageDetection() {
+    // Only run on root path
+    const currentPath = window.location.pathname;
+    const isRootPath = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/its-me-lp/') || currentPath.endsWith('/its-me-lp/index.html');
+    
+    if (!isRootPath) {
+        return;
+    }
+    
+    // Check if user is a crawler/bot
+    if (/bot|crawler|spider|googlebot|bingbot|yandexbot|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent)) {
+        return;
+    }
+    
+    // Check if user has already made a language choice
+    const userPreference = localStorage.getItem('preferredLanguage');
+    if (userPreference) {
+        return;
+    }
+    
+    // Check if banner was already dismissed today
+    const bannerDismissed = sessionStorage.getItem('langBannerDismissed');
+    if (bannerDismissed) {
+        return;
+    }
+    
+    // Detect browser language
+    const browserLang = (navigator.language || navigator.languages[0] || 'en').toLowerCase();
+    
+    // Map browser languages to available languages
+    const langMap = {
+        'ja': 'ja',
+        'ja-jp': 'ja',
+        'ko': 'ko', 
+        'ko-kr': 'ko',
+        'es': 'es',
+        'es-es': 'es',
+        'es-mx': 'es',
+        'es-ar': 'es',
+        'es-co': 'es'
+    };
+    
+    const detectedLang = langMap[browserLang] || langMap[browserLang.split('-')[0]];
+    
+    // Show suggestion banner if detected language is available
+    if (detectedLang && detectedLang !== 'en') {
+        showLanguageSuggestionBanner(detectedLang);
+    }
+}
+
+function showLanguageSuggestionBanner(suggestedLang) {
+    const langNames = {
+        'ja': '日本語',
+        'ko': '한국어',
+        'es': 'Español'
+    };
+    
+    const langMessages = {
+        'ja': '🌍 日本語でご覧になりますか？',
+        'ko': '🌍 한국어로 보시겠습니까?',
+        'es': '🌍 ¿Ver en Español?'
+    };
+    
+    const langButtons = {
+        'ja': '日本語で表示',
+        'ko': '한국어로 보기',
+        'es': 'Ver en Español'
+    };
+    
+    const langUrls = {
+        'ja': './ja/',
+        'ko': './ko/',
+        'es': './es/'
+    };
+    
+    // Create banner element
+    const banner = document.createElement('div');
+    banner.id = 'lang-suggestion-banner';
+    banner.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #8B7EC8 0%, #92C5F7 100%);
+        color: white;
+        padding: 12px 20px;
+        font-size: 14px;
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        animation: slideDown 0.3s ease-out;
+    `;
+    
+    // Add CSS animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        #lang-suggestion-banner button {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+        #lang-suggestion-banner button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
+        }
+        #lang-suggestion-banner .close-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    banner.innerHTML = `
+        <span>${langMessages[suggestedLang]}</span>
+        <button onclick="acceptLanguageSuggestion('${suggestedLang}')">${langButtons[suggestedLang]}</button>
+        <button onclick="dismissLanguageBanner()" class="close-btn">×</button>
+    `;
+    
+    // Add banner to page
+    document.body.insertBefore(banner, document.body.firstChild);
+    
+    // Adjust body padding to account for banner
+    document.body.style.paddingTop = '60px';
+    
+    // Auto-dismiss after 10 seconds
+    setTimeout(() => {
+        dismissLanguageBanner();
+    }, 10000);
+}
+
+// Global functions for banner interaction
+window.acceptLanguageSuggestion = function(lang) {
+    // Save user preference
+    localStorage.setItem('preferredLanguage', lang);
+    sessionStorage.setItem('langBannerDismissed', 'true');
+    
+    // Navigate to language version
+    const langUrls = {
+        'ja': './ja/',
+        'ko': './ko/',
+        'es': './es/'
+    };
+    
+    if (langUrls[lang]) {
+        window.location.href = langUrls[lang];
+    }
+};
+
+window.dismissLanguageBanner = function() {
+    const banner = document.getElementById('lang-suggestion-banner');
+    if (banner) {
+        banner.style.animation = 'slideUp 0.3s ease-out forwards';
+        
+        // Add slide up animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideUp {
+                from { transform: translateY(0); }
+                to { transform: translateY(-100%); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        setTimeout(() => {
+            banner.remove();
+            document.body.style.paddingTop = '';
+        }, 300);
+    }
+    
+    // Remember dismissal for this session
+    sessionStorage.setItem('langBannerDismissed', 'true');
+};
+
+// Initialize language detection
+initLanguageDetection();
 
 // Screenshot slideshow
 function initScreenshotSlideshow() {
