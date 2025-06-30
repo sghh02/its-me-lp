@@ -1,0 +1,86 @@
+[build]
+  publish = "."
+  command = "echo 'Static site, no build command needed'"
+
+# Redirect from old domain to new domain
+[[redirects]]
+  from = "https://itsme-app.com/*"
+  to = "https://itsme-types.com/:splat"
+  status = 301
+  force = true
+
+# Redirect /app/* to Firebase Hosting subdomain
+[[redirects]]
+  from = "/app/*"
+  to = "https://app.itsme-types.com/:splat"
+  status = 301
+  force = true
+
+# Language-based redirects for root path
+[[redirects]]
+  from = "/"
+  to = "/ja/"
+  status = 302
+  conditions = {Language = ["ja"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ko/"
+  status = 302
+  conditions = {Language = ["ko"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  conditions = {Language = ["es"]}
+
+# Default fallback to Japanese (most common user base)
+[[redirects]]
+  from = "/"
+  to = "/ja/"
+  status = 302
+
+# 404 page handling
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security headers (complement existing _headers file)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache control for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# PWA manifest cache
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# HTML pages - shorter cache with revalidation
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
