@@ -9,6 +9,13 @@
   status = 301
   force = true
 
+# Redirect /app/* to Firebase Hosting subdomain
+[[redirects]]
+  from = "/app/*"
+  to = "https://app.itsme-types.com/:splat"
+  status = 301
+  force = true
+
 # Language-based redirects for root path
 [[redirects]]
   from = "/"
