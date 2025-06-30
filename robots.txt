@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://itsme-app.com/sitemap.xml
+Sitemap: https://itsme-types.com/sitemap.xml
 
 # Disallow specific files
 Disallow: /manifest.json
