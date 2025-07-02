@@ -145,10 +145,10 @@ function initLanguageSwitcher() {
         }
         
         const langPaths = {
-            'en': isSubpage ? `../${targetFile}` : `./${targetFile}`,
-            'ja': isSubpage ? `../ja/${targetFile}` : `./ja/${targetFile}`,
-            'ko': isSubpage ? `../ko/${targetFile}` : `./ko/${targetFile}`,
-            'es': isSubpage ? `../es/${targetFile}` : `./es/${targetFile}`
+            'en': `/${targetFile}`,
+            'ja': `/ja/${targetFile}`,
+            'ko': `/ko/${targetFile}`,
+            'es': `/es/${targetFile}`
         };
         
         if (langPaths[langCode]) {
