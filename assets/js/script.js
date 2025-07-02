@@ -114,16 +114,10 @@ document.querySelectorAll('.fade-in').forEach(el => {
 // Language selector sync with page navigation
 // Language switcher functionality
 function initLanguageSwitcher() {
-    console.log('Initializing language switcher...');
-    
     const desktopLangSelect = document.querySelector('.lang-select-desktop');
     const mobileLangSelect = document.querySelector('.lang-select-mobile');
-    
-    console.log('Desktop selector found:', !!desktopLangSelect);
-    console.log('Mobile selector found:', !!mobileLangSelect);
 
     if (!desktopLangSelect || !mobileLangSelect) {
-        console.warn('Language switcher elements not found');
         return;
     }
 
@@ -168,21 +162,15 @@ function initLanguageSwitcher() {
     mobileLangSelect.value = currentLang;
 
     // Add event listeners
-    console.log('Adding event listeners...');
-    
     desktopLangSelect.addEventListener('change', (e) => {
-        console.log('Desktop language changed to:', e.target.value);
         mobileLangSelect.value = e.target.value;
         navigateToLanguage(e.target.value);
     });
 
     mobileLangSelect.addEventListener('change', (e) => {
-        console.log('Mobile language changed to:', e.target.value);
         desktopLangSelect.value = e.target.value;
         navigateToLanguage(e.target.value);
     });
-    
-    console.log('Language switcher initialized successfully');
 }
 
 // Initialize language switcher
