@@ -126,6 +126,7 @@ function initLanguageSwitcher() {
         localStorage.setItem('preferredLanguage', langCode);
         
         const currentPath = window.location.pathname;
+        console.log('🔍 Debug - currentPath:', currentPath, 'langCode:', langCode);
         
         // より堅牢なファイル名抽出ロジック
         let targetFile = 'index.html';
@@ -164,8 +165,12 @@ function initLanguageSwitcher() {
             'es': `/es/${targetFile}`
         };
         
+        console.log('🔍 Debug - targetFile:', targetFile, 'navigating to:', langPaths[langCode]);
+        
         if (langPaths[langCode]) {
             window.location.href = langPaths[langCode];
+        } else {
+            console.error('❌ No valid path found for langCode:', langCode);
         }
     }
 
