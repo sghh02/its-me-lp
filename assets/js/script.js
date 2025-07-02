@@ -126,13 +126,26 @@ function initLanguageSwitcher() {
         localStorage.setItem('preferredLanguage', langCode);
         
         const currentPath = window.location.pathname;
-        const fileName = currentPath.split('/').pop() || 'index.html';
-        const isSubpage = currentPath.includes('/ja/') || currentPath.includes('/ko/') || currentPath.includes('/es/');
         
-        // 現在のページタイプを維持
-        let targetFile = fileName;
-        if (fileName === '' || fileName === '/') {
-            targetFile = 'index.html';
+        // より堅牢なファイル名抽出ロジック
+        let targetFile = 'index.html';
+        const pathParts = currentPath.split('/').filter(part => part);
+        
+        if (pathParts.length > 0) {
+            const lastPart = pathParts[pathParts.length - 1];
+            if (lastPart.includes('.html')) {
+                targetFile = lastPart;
+            } else {
+                // パスの最後がディレクトリの場合、該当するHTMLファイルを探す
+                const languageDirs = ['ja', 'ko', 'es'];
+                if (languageDirs.includes(lastPart)) {
+                    // 言語ディレクトリ内のindex.html
+                    targetFile = 'index.html';
+                } else {
+                    // その他の場合もindex.htmlとする
+                    targetFile = 'index.html';
+                }
+            }
         }
         
         // 特定のページで多言語版が存在するかチェック
