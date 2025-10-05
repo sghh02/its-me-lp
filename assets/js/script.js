@@ -1,13 +1,36 @@
 // Remove no-js class when JavaScript is available
 document.documentElement.classList.remove('no-js');
 
-// Header scroll effect
+// Header scroll effect with auto-hide
+let lastScrollY = 0;
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const header = document.querySelector('.header');
+            const currentScrollY = window.scrollY;
+
+            // Add scrolled class when scrolled down
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Hide header when scrolling down, show when scrolling up
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('header-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+        });
+        ticking = true;
     }
 });
 
