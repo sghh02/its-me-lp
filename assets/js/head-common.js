@@ -21,28 +21,7 @@
     // Create and inject meta elements
     function injectMetaElements() {
         const head = document.head;
-        
-        // Security Headers
-        const securityHeaders = [
-            { 'http-equiv': 'X-Content-Type-Options', content: 'nosniff' },
-            { 'http-equiv': 'X-Frame-Options', content: 'DENY' },
-            { 'http-equiv': 'X-XSS-Protection', content: '1; mode=block' },
-            { 'http-equiv': 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-            { 'http-equiv': 'Permissions-Policy', content: 'geolocation=(), microphone=(), camera=()' },
-            { 'http-equiv': 'Content-Security-Policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" }
-        ];
-        
-        // Add security headers
-        securityHeaders.forEach(header => {
-            const meta = document.createElement('meta');
-            if (header['http-equiv']) {
-                meta.setAttribute('http-equiv', header['http-equiv']);
-            }
-            meta.setAttribute('content', header.content);
-            head.appendChild(meta);
-        });
-        
-        // Add SEO meta
+        // Security headers are set via Netlify config. Only add SEO-related meta here.
         const robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name', 'robots');
         robotsMeta.setAttribute('content', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');

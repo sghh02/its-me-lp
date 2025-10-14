@@ -231,13 +231,11 @@ initLanguageSwitcher();
 
 // Language detection and suggestion banner
 function initLanguageDetection() {
-    // Only run on root path
+    // Run on root and locale top paths
     const currentPath = window.location.pathname;
-    const isRootPath = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/its-me-lp/') || currentPath.endsWith('/its-me-lp/index.html');
-    
-    if (!isRootPath) {
-        return;
-    }
+    const localeRoots = ['/', '/ja/', '/ko/', '/es/'];
+    const isTargetPath = localeRoots.includes(currentPath) || currentPath === '/index.html';
+    if (!isTargetPath) return;
     
     // Check if user is a crawler/bot
     if (/bot|crawler|spider|googlebot|bingbot|yandexbot|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent)) {
@@ -274,8 +272,9 @@ function initLanguageDetection() {
     
     const detectedLang = langMap[browserLang] || langMap[browserLang.split('-')[0]];
     
-    // Show suggestion banner if detected language is available
-    if (detectedLang && detectedLang !== 'en') {
+    // Show suggestion only if it differs from current page language
+    const currentLang = document.documentElement.lang || 'en';
+    if (detectedLang && detectedLang !== currentLang) {
         showLanguageSuggestionBanner(detectedLang);
     }
 }
