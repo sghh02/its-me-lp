@@ -7,8 +7,8 @@
     const isSubpage = currentPath.includes('/ja/') || currentPath.includes('/ko/') || currentPath.includes('/es/');
     const currentLang = document.documentElement.lang || 'en';
     
-    // Base URL for the site
-    const baseUrl = 'https://sghh02.github.io/its-me-lp';
+    // Base URL for the site (used if needed elsewhere)
+    const baseUrl = 'https://itsme-types.com';
     
     // Determine current page type
     let pageType = 'index';
@@ -49,38 +49,7 @@
         head.appendChild(robotsMeta);
     }
     
-    // Create and inject hreflang tags
-    function injectHreflangTags() {
-        const head = document.head;
-        
-        // Generate URLs based on page type
-        const urls = {
-            'en': pageType === 'index' ? `${baseUrl}/` : `${baseUrl}/${pageType}.html`,
-            'ja': pageType === 'index' ? `${baseUrl}/ja/` : `${baseUrl}/ja/${pageType}.html`,
-            'ko': pageType === 'index' ? `${baseUrl}/ko/` : `${baseUrl}/ko/${pageType}.html`,
-            'es': pageType === 'index' ? `${baseUrl}/es/` : `${baseUrl}/es/${pageType}.html`
-        };
-        
-        // Create hreflang comment
-        const hreflangComment = document.createComment(' Hreflang Tags ');
-        head.appendChild(hreflangComment);
-        
-        // Add hreflang links
-        Object.entries(urls).forEach(([lang, url]) => {
-            const link = document.createElement('link');
-            link.setAttribute('rel', 'alternate');
-            link.setAttribute('hreflang', lang);
-            link.setAttribute('href', url);
-            head.appendChild(link);
-        });
-        
-        // Add x-default
-        const defaultLink = document.createElement('link');
-        defaultLink.setAttribute('rel', 'alternate');
-        defaultLink.setAttribute('hreflang', 'x-default');
-        defaultLink.setAttribute('href', urls.en);
-        head.appendChild(defaultLink);
-    }
+    // Hreflang tags are managed statically in HTML for SEO reliability
     
     // Create and inject favicon links
     function injectFaviconLinks() {
@@ -121,12 +90,10 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             injectMetaElements();
-            injectHreflangTags();
             injectFaviconLinks();
         });
     } else {
         injectMetaElements();
-        injectHreflangTags();
         injectFaviconLinks();
     }
 })();

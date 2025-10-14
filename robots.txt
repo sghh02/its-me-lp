@@ -4,12 +4,10 @@ Allow: /
 # Sitemap
 Sitemap: https://itsme-types.com/sitemap.xml
 
-# Disallow specific files
-Disallow: /manifest.json
-Disallow: /assets/js/
-Disallow: /assets/css/
-
-# Allow important resources for SEO
+# Allow rendering resources (CSS/JS/images)
+# Modern crawlers should fetch static assets to render pages correctly.
+Allow: /assets/css/
+Allow: /assets/js/
 Allow: /assets/images/
 Allow: /assets/images/app_icon/
 Allow: /assets/images/badges/

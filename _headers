@@ -2,53 +2,11 @@
 # For static hosting services that support _headers file
 
 /*
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://*.firebase.googleapis.com; frame-src 'none'; object-src 'none';
+  # Security headers
+  # Note: Most common headers (X-Frame-Options, X-XSS-Protection, X-Content-Type-Options,
+  # Referrer-Policy, Permissions-Policy) are defined in netlify.toml to avoid duplication.
+  # Keep CSP and HSTS here as they are not set in netlify.toml.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Cache Control for Static Assets
-/*.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.gif
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.ico
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.woff
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.ttf
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache Control for HTML files
-/*.html
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
+# Cache Control is defined in netlify.toml to keep a single source of truth.

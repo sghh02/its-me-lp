@@ -180,16 +180,28 @@ function initLanguageSwitcher() {
             targetFile = 'index.html';
         }
         
-        const langPaths = {
-            'en': `/${targetFile}`,
-            'ja': `/ja/${targetFile}`,
-            'ko': `/ko/${targetFile}`,
-            'es': `/es/${targetFile}`
-        };
-        
-        if (langPaths[langCode]) {
-            window.location.href = langPaths[langCode];
+        let destination = '';
+        if (targetFile === 'index.html') {
+            // Use directory-style URLs for index pages
+            const indexPaths = {
+                'en': '/',
+                'ja': '/ja/',
+                'ko': '/ko/',
+                'es': '/es/'
+            };
+            destination = indexPaths[langCode] || '/';
+        } else {
+            // Keep explicit filenames for non-index pages
+            const filePaths = {
+                'en': `/${targetFile}`,
+                'ja': `/ja/${targetFile}`,
+                'ko': `/ko/${targetFile}`,
+                'es': `/es/${targetFile}`
+            };
+            destination = filePaths[langCode] || '/';
         }
+
+        window.location.href = destination;
     }
 
     // Set current language in selectors
@@ -283,9 +295,9 @@ function showLanguageSuggestionBanner(suggestedLang) {
     };
     
     const langUrls = {
-        'ja': './ja/',
-        'ko': './ko/',
-        'es': './es/'
+        'ja': '/ja/',
+        'ko': '/ko/',
+        'es': '/es/'
     };
     
     // Create banner element
@@ -372,9 +384,9 @@ window.acceptLanguageSuggestion = function(lang) {
     
     // Navigate to language version
     const langUrls = {
-        'ja': './ja/',
-        'ko': './ko/',
-        'es': './es/'
+        'ja': '/ja/',
+        'ko': '/ko/',
+        'es': '/es/'
     };
     
     if (langUrls[lang]) {

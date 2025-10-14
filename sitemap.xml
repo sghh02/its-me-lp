@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/" />
   </url>
   <url>
     <loc>https://itsme-types.com/es/</loc>
@@ -21,7 +21,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/" />
   </url>
   <url>
     <loc>https://itsme-types.com/ja/</loc>
@@ -32,7 +32,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/" />
   </url>
   <url>
     <loc>https://itsme-types.com/ko/</loc>
@@ -43,7 +43,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/" />
   </url>
   <url>
     <loc>https://itsme-types.com/privacy-policy.html</loc>
@@ -54,7 +54,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/privacy-policy.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/terms-of-service.html</loc>
@@ -65,7 +65,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/terms-of-service.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/terms-of-service.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/terms-of-service.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/es/privacy-policy.html</loc>
@@ -76,7 +76,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/privacy-policy.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/es/terms-of-service.html</loc>
@@ -87,7 +87,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/terms-of-service.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/terms-of-service.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/terms-of-service.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/ja/privacy-policy.html</loc>
@@ -98,7 +98,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/privacy-policy.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/ja/terms-of-service.html</loc>
@@ -109,7 +109,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/terms-of-service.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/terms-of-service.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/terms-of-service.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/ko/privacy-policy.html</loc>
@@ -120,7 +120,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/privacy-policy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/privacy-policy.html" />
   </url>
   <url>
     <loc>https://itsme-types.com/ko/terms-of-service.html</loc>
@@ -131,6 +131,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://itsme-types.com/es/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://itsme-types.com/ja/terms-of-service.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://itsme-types.com/ko/terms-of-service.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/terms-of-service.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itsme-types.com/ja/terms-of-service.html" />
   </url>
 </urlset>

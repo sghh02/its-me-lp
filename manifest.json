@@ -1,6 +1,6 @@
 {
-  "name": "It's Me - Values Assessment",
-  "short_name": "It's Me",
+  "name": "it's me - Values Assessment",
+  "short_name": "it's me",
   "description": "Discover your true self through 48 questions. Your personal AI advisor helps you take positive steps forward.",
   "start_url": "/",
   "display": "standalone",
