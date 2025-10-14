@@ -159,13 +159,18 @@ function initLanguageSwitcher() {
             if (lastPart.includes('.html')) {
                 targetFile = lastPart;
             } else {
-                // パスの最後がディレクトリの場合、該当するHTMLファイルを探す
+                // Clean URL（拡張子なし）やディレクトリ終端に対応
                 const languageDirs = ['ja', 'ko', 'es'];
+                const cleanToFileMap = {
+                    'privacy-policy': 'privacy-policy.html',
+                    'terms-of-service': 'terms-of-service.html'
+                };
+
                 if (languageDirs.includes(lastPart)) {
-                    // 言語ディレクトリ内のindex.html
                     targetFile = 'index.html';
+                } else if (cleanToFileMap[lastPart]) {
+                    targetFile = cleanToFileMap[lastPart];
                 } else {
-                    // その他の場合もindex.htmlとする
                     targetFile = 'index.html';
                 }
             }
